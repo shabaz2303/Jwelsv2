@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surani & Sons — Global Wholesale &amp; Retail Diamonds and Fine Jewelry</title>
+  <meta name="description" content="Maison Aurelia supplies certified loose diamonds and fine jewelry to retailers, wholesalers and private clients worldwide. Explore collections and enquire for a private quotation." />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:title" content="Maison Aurelia — Diamonds & Fine Jewelry, Wholesale & Retail" />
+  <meta property="og:description" content="Certified natural and lab-grown diamonds, fine jewelry and private consultation for B2B and B2C clients." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,15 75,15 95,40 50,92 5,40' fill='%23d4af37'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { obsidian: '#09090b', gold: '#d4af37', crimson: '#991b1b' },
+        fontFamily: { display: ['Cormorant Garamond', 'serif'], sans: ['Inter', 'sans-serif'] }
+      } }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('no-js'); </script>
+</head>
+
+<body class="antialiased">
+  <div id="progress"></div>
+
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <svg class="gem" viewBox="0 0 100 100"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset="1" stop-color="#b8912a"/></linearGradient></defs>
+      <polygon points="28,14 72,14 94,40 50,92 6,40" fill="url(#lg)" opacity=".9"/><polygon points="28,14 50,40 72,14" fill="#fff" opacity=".35"/><polygon points="6,40 50,40 50,92" fill="#000" opacity=".18"/></svg>
+    <div class="font-display text-2xl tracking-[.4em] gold-text uppercase">Maison Aurelia</div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <!-- Navigation -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 py-4">
+    <div class="max-w-7xl mx-auto px-5 flex items-center justify-between gap-4">
+      <a href="#hero" class="flex items-center gap-3 shrink-0" aria-label="Maison Aurelia home">
+        <svg width="34" height="34" viewBox="0 0 100 100"><polygon points="28,14 72,14 94,40 50,92 6,40" fill="none" stroke="#d4af37" stroke-width="5" stroke-linejoin="round"/><polyline points="6,40 94,40 M28,14 40,40 50,92 60,40 72,14" fill="none" stroke="#d4af37" stroke-width="3" stroke-linejoin="round"/></svg>
+        <span class="font-display text-xl tracking-[.28em] uppercase">Maison <span class="gold-text">Aurelia</span></span>
+      </a>
+      <nav class="hidden xl:flex items-center gap-7" aria-label="Primary">
+        <a class="nav-link" href="#hub">Portals</a>
+        <a class="nav-link" href="#collections">Collections</a>
+        <a class="nav-link" href="#diamonds">Loose Diamonds</a>
+        <a class="nav-link" href="#anatomy">Diamond Guide</a>
+        <a class="nav-link" href="#help">Help</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#invest">Invest</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <div class="mode-switch hidden sm:inline-flex" role="group" aria-label="Pricing view">
+          <button data-mode="retail" class="on">Retail</button>
+          <button data-mode="wholesale">Wholesale</button>
+        </div>
+        <button class="btn btn-gold btn-sm hidden md:inline-flex" data-enquire="General consultation">Enquire</button>
+        <button id="menu-btn" class="xl:hidden w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center" aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#d4af37" stroke-width="1.5"><path d="M0 1h20M0 7h20M0 13h20"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-obsidian/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6 xl:hidden">
+    <button id="menu-close" class="absolute top-5 right-5 w-11 h-11 rounded-full border border-gold/40 text-gold text-xl" aria-label="Close menu">&times;</button>
+    <a class="mnav font-display text-4xl" href="#hub">Portals</a>
+    <a class="mnav font-display text-4xl" href="#collections">Collections</a>
+    <a class="mnav font-display text-4xl" href="#diamonds">Loose Diamonds</a>
+    <a class="mnav font-display text-4xl" href="#anatomy">Diamond Guide</a>
+    <a class="mnav font-display text-4xl" href="#help">Help</a>
+    <a class="mnav font-display text-4xl" href="#about">About</a>
+    <a class="mnav font-display text-4xl" href="#invest">Invest</a>
+    <a class="mnav font-display text-4xl" href="#contact">Contact</a>
+    <div class="mode-switch mt-4" role="group" aria-label="Pricing view (mobile)">
+      <button data-mode="retail" class="on">Retail</button>
+      <button data-mode="wholesale">Wholesale</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" class="pt-28 pb-16">
+      <canvas id="sparkles"></canvas>
+      <div class="hero-glow" style="background:#991b1b; top:-20%; left:-15%"></div>
+      <div class="hero-glow" style="background:#d4af37; bottom:-30%; right:-15%; opacity:.18"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 w-full grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="eyebrow mb-7" id="hero-eyebrow">Wholesale &amp; Retail &middot; Six Continents</p>
+          <h1 class="font-display font-medium leading-[.95] text-[clamp(3rem,8.6vw,7.6rem)]" id="hero-title" aria-label="Brilliance, supplied to the world.">
+            <span class="hero-line"><span class="hero-word">Brilliance,</span></span>
+            <span class="hero-line"><span class="hero-word italic gold-text">supplied</span> <span class="hero-word">to</span></span>
+            <span class="hero-line"><span class="hero-word">the world.</span></span>
+          </h1>
+          <p class="mt-8 max-w-xl text-[#b9b19b] leading-relaxed text-base md:text-lg" id="hero-sub">
+            Certified natural and lab-grown diamonds, and fine jewelry in gold and platinum &mdash; sourced responsibly, crafted precisely, and delivered insured to jewelers, wholesalers and private clients across the globe.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4" id="hero-cta">
+            <a href="#collections" class="btn btn-gold" data-set-mode="retail">Explore Retail Collection</a>
+            <a href="#hub" class="btn btn-crimson" data-set-mode="wholesale">Wholesale B2B Portal</a>
+          </div>
+          <dl class="mt-14 grid grid-cols-3 gap-6 max-w-xl" id="hero-stats">
+            <div><dt class="stat-num gold-text"><span data-count="38">0</span>+</dt><dd class="text-[.7rem] tracking-[.2em] uppercase text-[#8f8878] mt-2">Countries served</dd></div>
+            <div><dt class="stat-num gold-text"><span data-count="12000">0</span>+</dt><dd class="text-[.7rem] tracking-[.2em] uppercase text-[#8f8878] mt-2">Certified stones</dd></div>
+            <div><dt class="stat-num gold-text"><span data-count="25">0</span></dt><dd class="text-[.7rem] tracking-[.2em] uppercase text-[#8f8878] mt-2">Years of craft</dd></div>
+          </dl>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center hero-gem-wrap">
+          <svg id="hero-gem" viewBox="0 0 400 360" role="img" aria-label="Illustration of a brilliant-cut diamond">
+            <defs>
+              <linearGradient id="hg-crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8d6"/><stop offset=".5" stop-color="#d4af37"/><stop offset="1" stop-color="#7a5a12"/></linearGradient>
+              <linearGradient id="hg-pav" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9c75a"/><stop offset="1" stop-color="#5e1313"/></linearGradient>
+              <linearGradient id="hg-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              <clipPath id="hg-clip"><polygon points="110,30 290,30 370,120 200,340 30,120"/></clipPath>
+            </defs>
+            <polygon points="110,30 290,30 370,120 200,340 30,120" fill="url(#hg-pav)"/>
+            <polygon points="110,30 290,30 370,120 30,120" fill="url(#hg-crown)"/>
+            <g stroke="rgba(255,255,255,.5)" stroke-width="1.4" fill="none" stroke-linejoin="round">
+              <polygon points="110,30 290,30 370,120 200,340 30,120"/>
+              <line x1="30" y1="120" x2="370" y2="120"/>
+              <polyline points="110,30 150,120 200,30 250,120 290,30"/>
+              <polyline points="30,120 200,340 370,120"/>
+              <polyline points="150,120 200,340 250,120"/>
+              <line x1="90" y1="120" x2="200" y2="340" stroke-opacity=".3"/><line x1="310" y1="120" x2="200" y2="340" stroke-opacity=".3"/>
+            </g>
+            <g clip-path="url(#hg-clip)"><rect id="gem-shine" x="-140" y="0" width="90" height="360" fill="url(#hg-shine)" transform="skewX(-18)"/></g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 inset-x-0 z-10 text-center text-[.62rem] tracking-[.4em] uppercase text-[#8f8878] scroll-cue hidden md:block">Scroll</div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="border-y border-gold/15 py-5 overflow-hidden bg-black/30" aria-hidden="true">
+      <div class="marquee font-display text-3xl md:text-4xl text-[#6f6757]">
+        <span class="px-8 whitespace-nowrap">GIA &amp; IGI Certified &#9670; Insured Global Shipping &#9670; Ethically Sourced &#9670; Bespoke Manufacturing &#9670; Vault Logistics &#9670; Natural &amp; Lab-Grown &#9670;</span>
+        <span class="px-8 whitespace-nowrap">GIA &amp; IGI Certified &#9670; Insured Global Shipping &#9670; Ethically Sourced &#9670; Bespoke Manufacturing &#9670; Vault Logistics &#9670; Natural &amp; Lab-Grown &#9670;</span>
+        <span class="px-8 whitespace-nowrap">GIA &amp; IGI Certified &#9670; Insured Global Shipping &#9670; Ethically Sourced &#9670; Bespoke Manufacturing &#9670; Vault Logistics &#9670; Natural &amp; Lab-Grown &#9670;</span>
+        <span class="px-8 whitespace-nowrap">GIA &amp; IGI Certified &#9670; Insured Global Shipping &#9670; Ethically Sourced &#9670; Bespoke Manufacturing &#9670; Vault Logistics &#9670; Natural &amp; Lab-Grown &#9670;</span>
+      </div>
+    </div>
+
+    <!-- ===================== ENTRY HUB ===================== -->
+    <section id="hub" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-2xl mb-14" data-reveal>
+          <p class="eyebrow mb-5">Choose Your Gateway</p>
+          <h2 class="section-title">Two doors. <span class="italic gold-text">One standard</span> of excellence.</h2>
+        </div>
+        <div class="hub-wrap flex flex-col lg:flex-row gap-6">
+          <article class="glass hub-panel" id="hub-retail" tabindex="0" role="button" aria-label="Enter the Retail portal" data-reveal>
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=70')"></div>
+            <span class="eyebrow mb-4">B2C &middot; Private Clients</span>
+            <h3 class="font-display text-4xl md:text-5xl mb-4">Retail <span class="italic gold-text">Portal</span></h3>
+            <p class="text-[#c1b9a3] max-w-md leading-relaxed mb-6">Engagement rings, heirloom pieces and gifts, guided by a personal consultant. Browse, shortlist and enquire &mdash; we arrange viewings, sizing and insured delivery.</p>
+            <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-[#a9a18b] mb-7 max-w-md">
+              <li>&#9670; Personal consultation</li><li>&#9670; Complimentary resizing</li><li>&#9670; Certified stones</li><li>&#9670; Gift-ready packaging</li>
+            </ul>
+            <div><span class="btn btn-gold">Enter Retail</span></div>
+          </article>
+          <article class="glass hub-panel" id="hub-wholesale" tabindex="0" role="button" aria-label="Enter the Wholesale portal" data-reveal>
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1200&q=70')"></div>
+            <span class="eyebrow mb-4">B2B &middot; Trade Partners</span>
+            <h3 class="font-display text-4xl md:text-5xl mb-4">Wholesale <span class="italic gold-text">Portal</span></h3>
+            <p class="text-[#c1b9a3] max-w-md leading-relaxed mb-6">Parcels, calibrated melee, finished jewelry and white-label manufacturing for jewelers and distributors. Volume tiers, memo terms and escrow-backed trade.</p>
+            <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-[#a9a18b] mb-7 max-w-md">
+              <li>&#9670; Volume price tiers</li><li>&#9670; Parcel &amp; melee supply</li><li>&#9670; White-label &amp; OEM</li><li>&#9670; Escrow-secured trade</li>
+            </ul>
+            <div><span class="btn btn-crimson">Enter Wholesale</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COLLECTIONS ===================== -->
+    <section id="collections" class="py-24 md:py-32 relative">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12" data-reveal>
+          <div class="max-w-2xl">
+            <p class="eyebrow mb-5">The Collections</p>
+            <h2 class="section-title">Worn on the body. <span class="italic gold-text">Cast in metal.</span></h2>
+          </div>
+          <p class="max-w-sm text-[#a9a18b] leading-relaxed">Select a placement, a metal, or both. Every piece is available to explore in detail and to enquire about &mdash; there is no checkout, only conversation.</p>
+        </div>
+
+        <h3 class="text-[.7rem] tracking-[.3em] uppercase text-[#8f8878] mb-5" data-reveal>By Placement</h3>
+        <div id="cat-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-5 mb-16" style="perspective:1400px"></div>
+
+        <h3 class="text-[.7rem] tracking-[.3em] uppercase text-[#8f8878] mb-5" data-reveal>By Material</h3>
+        <div id="mat-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5" style="perspective:1400px"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <section id="products" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-10" data-reveal>
+          <div>
+            <p class="eyebrow mb-5">Signature Pieces</p>
+            <h2 class="section-title">Presented <span class="italic gold-text">like a gallery.</span></h2>
+          </div>
+          <div class="text-sm text-[#a9a18b] flex items-center gap-3"><span id="filter-summary">Showing all pieces</span><button id="filter-clear" class="chip hidden">Clear filters</button></div>
+        </div>
+        <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" style="perspective:1600px"></div>
+        <p class="mt-8 text-xs text-[#6f6757] max-w-3xl">Pricing is shown as tiers rather than fixed figures because stone weight, metal market rates and order volume vary. Enquire for a written quotation in your currency. Illustrative imagery.</p>
+      </div>
+    </section>
+
+    <!-- ===================== LOOSE DIAMONDS ===================== -->
+    <section id="diamonds" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-3xl mb-16" data-reveal>
+          <p class="eyebrow mb-5">Loose Diamonds</p>
+          <h2 class="section-title">Choose the stone <span class="italic gold-text">before the setting.</span></h2>
+          <p class="mt-6 text-[#a9a18b] leading-relaxed">Navigate our inventory by origin, scientific type, shape, colour and clarity. Every stone ships with a grading report; lab-grown stones are always disclosed as such.</p>
+        </div>
+
+        <!-- Origin -->
+        <div class="mb-20">
+          <div class="flex flex-wrap items-center justify-between gap-5 mb-8" data-reveal>
+            <h3 class="font-display text-3xl">By Origin</h3>
+            <div class="origin-toggle" id="origin-toggle" role="group" aria-label="Diamond origin">
+              <button data-origin="all" class="on">All</button>
+              <button data-origin="natural">Natural Mined</button>
+              <button data-origin="lab">Lab-Grown</button>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6" id="origin-cards" style="perspective:1400px"></div>
+        </div>
+
+        <!-- Scientific classification -->
+        <div class="mb-20">
+          <div class="max-w-3xl mb-8" data-reveal>
+            <h3 class="font-display text-3xl mb-3">By Scientific Classification</h3>
+            <p class="text-[#a9a18b] leading-relaxed text-sm">Gemologists classify diamonds by the impurities detectable in their infrared spectra. Four formal types exist (Ia, Ib, IIa, IIb); carbonado &mdash; sometimes informally listed as a fifth &ldquo;Type Ic&rdquo; &mdash; is a distinct polycrystalline form rather than a formal type.</p>
+          </div>
+          <div id="type-grid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5"></div>
+        </div>
+
+        <!-- Shape -->
+        <div class="mb-20">
+          <h3 class="font-display text-3xl mb-8" data-reveal>By Shape &amp; Cut</h3>
+          <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            <div class="lg:col-span-7 grid grid-cols-3 sm:grid-cols-5 gap-3" id="shape-grid" data-reveal></div>
+            <aside class="lg:col-span-5 glass p-8 flex flex-col justify-between" id="shape-detail" data-reveal></aside>
+          </div>
+        </div>
+
+        <!-- Colour & clarity -->
+        <div>
+          <div class="flex flex-wrap items-end justify-between gap-6 mb-8" data-reveal>
+            <h3 class="font-display text-3xl">By Colour &amp; Clarity</h3>
+            <p class="text-sm text-[#8f8878]" id="stone-count"></p>
+          </div>
+          <div class="glass p-6 md:p-8 mb-8" data-reveal>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div><p class="field-label">Colour Range</p><div class="flex flex-wrap gap-2" id="color-tabs"></div></div>
+              <div><p class="field-label">Clarity Range</p><div class="flex flex-wrap gap-2" id="clarity-tabs"></div></div>
+            </div>
+            <p class="mt-5 text-xs text-[#8f8878]" id="active-shape-note"></p>
+          </div>
+          <div id="stone-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" style="perspective:1400px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ANATOMY & GUIDE ===================== -->
+    <section id="anatomy" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/45 to-transparent">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-3xl mb-14" data-reveal>
+          <p class="eyebrow mb-5">Diamond Anatomy &amp; Buying Guide</p>
+          <h2 class="section-title">Know your diamond, <span class="italic gold-text">part by part.</span></h2>
+          <p class="mt-6 text-[#a9a18b] leading-relaxed">Hover or tap any part of the diagram to learn what it does, which proportions to look for, and how it shapes the stone&rsquo;s fire and brilliance.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 mb-24">
+          <div class="lg:col-span-7 glass p-4 sm:p-8" data-reveal>
+            <svg id="anatomy-svg" viewBox="0 0 560 420" class="w-full h-auto" role="img" aria-label="Interactive diagram of a round brilliant diamond showing table, crown, girdle, pavilion and culet">
+              <defs>
+                <linearGradient id="a-table" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6c8"/><stop offset="1" stop-color="#e5c868"/></linearGradient>
+                <linearGradient id="a-crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8cb6b"/><stop offset=".6" stop-color="#b8912a"/><stop offset="1" stop-color="#7b5b15"/></linearGradient>
+                <linearGradient id="a-girdle" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7b5b15"/><stop offset=".5" stop-color="#f3dc86"/><stop offset="1" stop-color="#7b5b15"/></linearGradient>
+                <linearGradient id="a-pav" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b53a2f"/><stop offset="1" stop-color="#4e0f10"/></linearGradient>
+              </defs>
+              <!-- diamond parts, centered x=250 -->
+              <g transform="translate(20,0)">
+                <polygon class="part" data-part="crown"   points="140,70 360,70 440,150 60,150"  fill="url(#a-crown)" stroke="rgba(255,255,255,.5)" stroke-width="1.4" stroke-linejoin="round"/>
+                <polygon class="part" data-part="table"   points="160,70 340,70 360,70 140,70 160,70" fill="none" stroke="none"/>
+                <rect    class="part" data-part="table"   x="150" y="62" width="200" height="10" rx="2" fill="url(#a-table)" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/>
+                <rect    class="part" data-part="girdle"  x="60" y="150" width="380" height="16" fill="url(#a-girdle)" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/>
+                <polygon class="part" data-part="pavilion" points="60,166 440,166 250,350" fill="url(#a-pav)" stroke="rgba(255,255,255,.45)" stroke-width="1.4" stroke-linejoin="round"/>
+                <circle  class="part" data-part="culet"   cx="250" cy="352" r="7" fill="#fff3b0" stroke="rgba(255,255,255,.8)" stroke-width="1.2"/>
+                <!-- facet lines -->
+                <g stroke="rgba(255,255,255,.3)" stroke-width="1" fill="none" pointer-events="none">
+                  <polyline points="150,70 200,150 250,70 300,150 350,70"/>
+                  <polyline points="60,166 250,350 440,166"/><polyline points="155,166 250,350 345,166"/>
+                  <line x1="250" y1="166" x2="250" y2="350" stroke-opacity=".18"/>
+                </g>
+                <!-- dimension lines -->
+                <g class="dim" pointer-events="none">
+                  <line x1="150" y1="42" x2="350" y2="42"/><line x1="150" y1="37" x2="150" y2="47"/><line x1="350" y1="37" x2="350" y2="47"/>
+                  <line x1="60" y1="395" x2="440" y2="395"/><line x1="60" y1="390" x2="60" y2="400"/><line x1="440" y1="390" x2="440" y2="400"/>
+                </g>
+                <text class="dim-t" x="250" y="32" text-anchor="middle">TABLE &mdash; ~54&ndash;60% OF DIAMETER</text>
+                <text class="dim-t" x="250" y="412" text-anchor="middle">DIAMETER (GIRDLE)</text>
+              </g>
+              <!-- labels with leader lines -->
+              <g>
+                <path class="lead" d="M 330 66 L 470 40"/><circle class="dot" cx="330" cy="66" r="3"/><text class="lbl" data-part="table" x="474" y="44">Table</text>
+                <path class="lead" d="M 440 112 L 480 112"/><circle class="dot" cx="440" cy="112" r="3"/><text class="lbl" data-part="crown" x="484" y="116">Crown</text>
+                <path class="lead" d="M 460 158 L 480 158"/><circle class="dot" cx="460" cy="158" r="3"/><text class="lbl" data-part="girdle" x="484" y="162">Girdle</text>
+                <path class="lead" d="M 395 230 L 480 230"/><circle class="dot" cx="395" cy="230" r="3"/><text class="lbl" data-part="pavilion" x="484" y="234">Pavilion</text>
+                <path class="lead" d="M 285 356 L 480 340"/><circle class="dot" cx="277" cy="356" r="3"/><text class="lbl" data-part="culet" x="484" y="344">Culet</text>
+                <circle class="dot pulse-dot" id="anatomy-pulse" cx="330" cy="66" r="4"/>
+              </g>
+            </svg>
+          </div>
+          <aside class="lg:col-span-5 glass p-8 md:p-10 flex flex-col" id="anatomy-panel" data-reveal aria-live="polite"></aside>
+        </div>
+
+        <!-- 4Cs -->
+        <div data-reveal>
+          <p class="eyebrow mb-5">The 4Cs</p>
+          <h3 class="section-title mb-10">Cut. Colour. <span class="italic gold-text">Clarity. Carat.</span></h3>
+        </div>
+        <div class="glass overflow-hidden" data-reveal>
+          <div class="flex overflow-x-auto border-b border-gold/15 px-3" role="tablist" id="c-tabs">
+            <button class="c-tab active" role="tab" data-c="cut">Cut</button>
+            <button class="c-tab" role="tab" data-c="color">Colour</button>
+            <button class="c-tab" role="tab" data-c="clarity">Clarity</button>
+            <button class="c-tab" role="tab" data-c="carat">Carat</button>
+          </div>
+          <div id="c-body" class="p-6 md:p-10 min-h-[420px]"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HELP / FAQ ===================== -->
+    <section id="help" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-12 gap-14">
+        <div class="lg:col-span-4" data-reveal>
+          <p class="eyebrow mb-5">Help Centre</p>
+          <h2 class="section-title mb-6">Questions, <span class="italic gold-text">answered.</span></h2>
+          <p class="text-[#a9a18b] leading-relaxed mb-8">Shipping, certification, vaulting and trade terms. Can&rsquo;t find what you need? A specialist will reply within one business day.</p>
+          <button class="btn btn-ghost" data-enquire="Help &amp; support question">Ask a specialist</button>
+        </div>
+        <div class="lg:col-span-8" id="faq" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/40 to-transparent">
+      <div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="relative" data-reveal>
+          <div class="glass p-3 rotate-[-2deg]"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=70" alt="Fine jewelry on display" class="rounded-2xl w-full aspect-[4/5] object-cover" loading="lazy" onerror="this.style.display='none'" /></div>
+          <div class="glass absolute -bottom-8 -right-2 md:-right-8 p-6 max-w-[240px]"><p class="font-display text-3xl gold-text leading-none mb-2">Since 2001</p><p class="text-xs text-[#a9a18b] leading-relaxed">Three generations of cutters, setters and traders.</p></div>
+        </div>
+        <div data-reveal>
+          <p class="eyebrow mb-5">About Us</p>
+          <h2 class="section-title mb-8">A heritage of <span class="italic gold-text">trust,</span> traded across borders.</h2>
+          <div class="space-y-5 text-[#b0a894] leading-relaxed">
+            <p>Maison Aurelia began as a single cutting bench and a conviction: that a diamond&rsquo;s value rests as much on the honesty of its seller as on its grade. Today we supply independent jewelers, regional chains and private clients on six continents from cutting centres and design studios across Asia, the Middle East, Europe and North America.</p>
+            <p>We source rough and polished stones through partners who meet responsible-sourcing standards, and we disclose origin &mdash; natural or laboratory-grown &mdash; on every invoice. Our workshops finish, set and inspect each piece under magnification before it is sealed, insured and shipped.</p>
+          </div>
+          <div class="grid grid-cols-3 gap-5 mt-10">
+            <div class="glass p-5"><p class="font-display text-2xl gold-text mb-1">Sourcing</p><p class="text-xs text-[#a9a18b] leading-relaxed">Traceable supply chains with documented provenance.</p></div>
+            <div class="glass p-5"><p class="font-display text-2xl gold-text mb-1">Craft</p><p class="text-xs text-[#a9a18b] leading-relaxed">In-house cutting, casting, setting and QC.</p></div>
+            <div class="glass p-5"><p class="font-display text-2xl gold-text mb-1">Trust</p><p class="text-xs text-[#a9a18b] leading-relaxed">Independent grading and transparent terms.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INVEST ===================== -->
+    <section id="invest" class="py-24 md:py-32">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-3xl mb-14" data-reveal>
+          <p class="eyebrow mb-5">Invest in Us</p>
+          <h2 class="section-title mb-6">Partner with a <span class="italic gold-text">tangible asset</span> business.</h2>
+          <p class="text-[#a9a18b] leading-relaxed">We welcome conversations with family offices, trade financiers and strategic partners interested in diamond inventory, vault-backed programmes and long-term growth in the jewelry supply chain.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6" style="perspective:1400px">
+          <article class="glass p-8" data-tilt data-reveal><span class="font-display text-5xl text-gold/30">01</span><h3 class="font-display text-3xl mt-3 mb-3 tilt-pop-sm">Inventory Partnership</h3><p class="text-sm text-[#a9a18b] leading-relaxed mb-6">Co-fund certified stone inventory that supplies our wholesale programme, with agreed revenue-sharing and documented stock reporting.</p><button class="btn btn-ghost btn-sm" data-enquire="Investor enquiry — Inventory Partnership">Request deck</button></article>
+          <article class="glass p-8" data-tilt data-reveal><span class="font-display text-5xl text-gold/30">02</span><h3 class="font-display text-3xl mt-3 mb-3 tilt-pop-sm">Vault-Backed Programmes</h3><p class="text-sm text-[#a9a18b] leading-relaxed mb-6">Structures in which graded stones are held in insured, segregated vault storage as collateral for trade finance, with third-party verification.</p><button class="btn btn-ghost btn-sm" data-enquire="Investor enquiry — Vault-Backed Programmes">Request deck</button></article>
+          <article class="glass p-8" data-tilt data-reveal><span class="font-display text-5xl text-gold/30">03</span><h3 class="font-display text-3xl mt-3 mb-3 tilt-pop-sm">Strategic Equity</h3><p class="text-sm text-[#a9a18b] leading-relaxed mb-6">Minority strategic participation for qualified investors aligned with our expansion into new retail and distribution markets.</p><button class="btn btn-ghost btn-sm" data-enquire="Investor enquiry — Strategic Equity">Request deck</button></article>
+        </div>
+        <p class="mt-8 text-xs text-[#6f6757] max-w-3xl leading-relaxed">This section is informational and is not an offer or solicitation to buy securities or an investment recommendation. Diamond values can rise or fall and resale prices differ from retail prices. No returns are guaranteed. Participation is limited to qualified investors, subject to due diligence and applicable law.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="py-24 md:py-32 bg-gradient-to-b from-transparent via-black/45 to-transparent">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="max-w-3xl mb-14" data-reveal>
+          <p class="eyebrow mb-5">Contact &amp; Global Offices</p>
+          <h2 class="section-title">Let&rsquo;s talk <span class="italic gold-text">diamonds.</span></h2>
+        </div>
+        <div class="grid lg:grid-cols-12 gap-8">
+          <form id="contact-form" class="lg:col-span-7 glass p-6 md:p-10 space-y-5" novalidate data-reveal>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label class="field-label" for="c-name">Full name *</label><input id="c-name" name="name" class="field" required autocomplete="name" placeholder="Your name" /></div>
+              <div><label class="field-label" for="c-email">Email *</label><input id="c-email" name="email" type="email" class="field" required autocomplete="email" placeholder="you@company.com" /></div>
+            </div>
+            <div class="grid sm:grid-cols-5 gap-5">
+              <div class="sm:col-span-2"><label class="field-label" for="c-dial">Country code</label><select id="c-dial" name="dial" class="field"></select></div>
+              <div class="sm:col-span-3"><label class="field-label" for="c-phone">Phone / WhatsApp</label><input id="c-phone" name="phone" type="tel" inputmode="tel" class="field" autocomplete="tel-national" placeholder="Phone number" /></div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div><label class="field-label" for="c-type">I am a</label><select id="c-type" name="type" class="field"><option>Private client (Retail)</option><option>Jeweler / Retailer (Wholesale)</option><option>Distributor / Importer (Wholesale)</option><option>Investor / Partner</option><option>Other</option></select></div>
+              <div><label class="field-label" for="c-company">Company (optional)</label><input id="c-company" name="company" class="field" autocomplete="organization" placeholder="Company name" /></div>
+            </div>
+            <div><label class="field-label" for="c-msg">Message *</label><textarea id="c-msg" name="message" rows="5" class="field" required placeholder="Tell us what you&rsquo;re looking for &mdash; stones, pieces, quantities, timelines."></textarea></div>
+            <div class="flex flex-wrap items-center gap-4"><button type="submit" class="btn btn-gold">Send enquiry</button><span class="text-xs text-[#8f8878]">Opens your email app with the enquiry pre-filled.</span></div>
+          </form>
+          <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 content-start" id="offices"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TERMS ===================== -->
+    <section id="terms" class="py-24 md:py-32">
+      <div class="max-w-5xl mx-auto px-5">
+        <div class="mb-12" data-reveal>
+          <p class="eyebrow mb-5">Terms &amp; Conditions</p>
+          <h2 class="section-title mb-5">Clear terms for <span class="italic gold-text">global trade.</span></h2>
+          <p class="text-[#a9a18b] leading-relaxed max-w-3xl">A summary of how we do business. Binding terms are set out in your written quotation and sales contract, which prevail over this page. Have your legal adviser review them before you commit.</p>
+        </div>
+        <div class="glass p-6 md:p-10 grid md:grid-cols-2 gap-x-12 gap-y-8 terms-body" id="terms-list" data-reveal></div>
+        <p class="mt-6 text-xs text-[#6f6757]">Last updated October 2026. This summary is general information, not legal advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="border-t border-gold/15 pt-16 pb-10 bg-black/50">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="font-display text-3xl tracking-[.25em] uppercase mb-4">Maison <span class="gold-text">Aurelia</span></div>
+        <p class="text-sm text-[#8f8878] max-w-sm leading-relaxed">Certified diamonds and fine jewelry for retailers, wholesalers and private clients worldwide.</p>
+      </div>
+      <div><p class="field-label">Explore</p><ul class="space-y-2 text-sm text-[#a9a18b]"><li><a class="hover:text-gold" href="#collections">Collections</a></li><li><a class="hover:text-gold" href="#diamonds">Loose Diamonds</a></li><li><a class="hover:text-gold" href="#anatomy">Diamond Guide</a></li><li><a class="hover:text-gold" href="#help">Help</a></li></ul></div>
+      <div><p class="field-label">Company</p><ul class="space-y-2 text-sm text-[#a9a18b]"><li><a class="hover:text-gold" href="#about">About Us</a></li><li><a class="hover:text-gold" href="#invest">Invest in Us</a></li><li><a class="hover:text-gold" href="#contact">Contact</a></li><li><a class="hover:text-gold" href="#terms">Terms &amp; Conditions</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 flex flex-wrap items-center justify-between gap-4 text-xs text-[#6f6757] border-t border-white/5 pt-6">
+      <p>&copy; <span id="year"></span> Maison Aurelia. All rights reserved.</p>
+      <p>Imagery illustrative. Diamond grading by independent laboratories.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== ENQUIRY MODAL ===================== -->
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="backdrop" data-close></div>
+    <div class="sheet glass p-6 md:p-10">
+      <button class="absolute top-4 right-4 w-10 h-10 rounded-full border border-gold/40 text-gold text-xl hover:bg-gold/10" data-close aria-label="Close enquiry">&times;</button>
+      <div id="modal-form-wrap">
+        <p class="eyebrow mb-4">Private Quotation</p>
+        <h3 id="modal-title" class="font-display text-4xl mb-2">Enquire <span class="italic gold-text">discreetly.</span></h3>
+        <p class="text-sm text-[#a9a18b] mb-6">Interest: <strong id="modal-interest" class="text-gold-soft font-medium" style="color:#f1d77a"></strong></p>
+        <form id="enquiry-form" class="space-y-5" novalidate>
+          <div class="seg" role="group" aria-label="Enquiry type">
+            <button type="button" data-kind="retail" class="on">Retail consultation</button>
+            <button type="button" data-kind="wholesale">Wholesale quotation</button>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div><label class="field-label" for="e-name">Full name *</label><input id="e-name" class="field" required autocomplete="name" /></div>
+            <div><label class="field-label" for="e-email">Email *</label><input id="e-email" type="email" class="field" required autocomplete="email" /></div>
+          </div>
+          <div class="grid sm:grid-cols-5 gap-5">
+            <div class="sm:col-span-2"><label class="field-label" for="e-dial">Country code</label><select id="e-dial" class="field"></select></div>
+            <div class="sm:col-span-3"><label class="field-label" for="e-phone">Phone / WhatsApp</label><input id="e-phone" type="tel" inputmode="tel" class="field" autocomplete="tel-national" /></div>
+          </div>
+          <div id="wholesale-fields" class="hidden grid sm:grid-cols-2 gap-5">
+            <div><label class="field-label" for="e-company">Company *</label><input id="e-company" class="field" autocomplete="organization" /></div>
+            <div><label class="field-label" for="e-qty">Estimated quantity / volume</label><input id="e-qty" class="field" placeholder="e.g. 50 pcs, 200 ct parcel" /></div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div><label class="field-label" for="e-country">Country</label><input id="e-country" class="field" autocomplete="country-name" /></div>
+            <div><label class="field-label" for="e-timeline">Timeline</label><select id="e-timeline" class="field"><option>Exploring options</option><option>Within 1 month</option><option>Within 3 months</option><option>Urgent</option></select></div>
+          </div>
+          <div><label class="field-label" for="e-msg">Details</label><textarea id="e-msg" rows="3" class="field" placeholder="Metal, size, stone preferences, certification requirements…"></textarea></div>
+          <div class="flex flex-wrap items-center gap-4"><button type="submit" class="btn btn-gold">Send enquiry</button><button type="button" class="btn btn-ghost" data-close>Cancel</button></div>
+        </form>
+      </div>
+      <div id="modal-success" class="hidden text-center py-10">
+        <svg class="mx-auto mb-6" width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="#d4af37" stroke-width="2.5"><circle cx="36" cy="36" r="32"/><path id="tick" d="M22 37l10 10 18-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 class="font-display text-4xl mb-3">Thank <span class="italic gold-text">you.</span></h3>
+        <p class="text-[#a9a18b] max-w-md mx-auto leading-relaxed mb-6">Your email app should have opened with your enquiry pre-filled &mdash; press send there to complete it. If nothing opened, copy the summary below and email it to us.</p>
+        <textarea id="summary-copy" class="field text-xs" rows="6" readonly></textarea>
+        <div class="mt-6 flex justify-center gap-3"><button class="btn btn-ghost btn-sm" id="copy-summary">Copy summary</button><button class="btn btn-gold btn-sm" data-close>Close</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="glass" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
